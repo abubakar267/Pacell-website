@@ -13,7 +13,7 @@ export const books = [
     ],
     cover: "/book1-cover.png",
     comingSoon: false,
-    buyUrl: "#",
+    buyUrl: "https://www.amazon.com/Meeting-Allens-Hart-Street-Jordan-ebook/dp/B0HKQ489K6",
   },
   {
     slug: "jordan-makes-a-stand",
@@ -26,7 +26,7 @@ export const books = [
     ],
     cover: "/pacell-cover-2.png",
     comingSoon: false,
-    buyUrl: "#",
+    buyUrl: "https://www.amazon.com/Meeting-Allens-Jordan-Makes-Stand-ebook/dp/B0HGLXY4KV",
   },
   {
     slug: "jordan-makes-an-important-decision",

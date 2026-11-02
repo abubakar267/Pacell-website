@@ -69,6 +69,8 @@ export default function BookShowcase({ book, flipped = false }) {
           ) : (
             <a
               href={book.buyUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block rounded-full bg-coral px-8 py-3 text-sm font-bold uppercase tracking-widest text-cream shadow-md transition-transform hover:-translate-y-0.5"
             >
               Order today

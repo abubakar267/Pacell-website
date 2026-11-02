@@ -48,6 +48,8 @@ export default function BookCard({ book }) {
           ) : (
             <a
               href={book.buyUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block rounded-full bg-coral px-6 py-2.5 text-sm font-bold text-cream transition-transform hover:-translate-y-0.5"
             >
               Order today
