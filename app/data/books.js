@@ -52,8 +52,14 @@ export const books = [
       "Jordan has learned to welcome others and to stand up for what is right. Now comes the choice that is his alone to make, with his family, the Allens and the whole gang beside him. Book three brings the series home.",
     ],
     cover: "/book3-cover.png",
-    comingSoon: true,
-    buyLinks: {},
+    comingSoon: false,
+    buyLinks: {
+      kindle:
+        "https://www.amazon.com/Meeting-Allens-Jordan-Important-Decision-ebook/dp/B0HQ58Y66P",
+      hardcover: null,
+      paperback:
+        "https://www.amazon.com/Meeting-Allens-Jordan-Important-Decision/dp/B0HQ6J2ZLV",
+    },
   },
 ];
 
