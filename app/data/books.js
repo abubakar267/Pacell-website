@@ -13,7 +13,14 @@ export const books = [
     ],
     cover: "/book1-cover.png",
     comingSoon: false,
-    buyUrl: "https://www.amazon.com/Meeting-Allens-Hart-Street-Jordan-ebook/dp/B0HKQ489K6",
+    buyLinks: {
+      kindle:
+        "https://www.amazon.com/Meeting-Allens-Hart-Street-Jordan-ebook/dp/B0HKQ489K6",
+      hardcover:
+        "https://www.amazon.com/Meeting-Allens-Street-Pacell-McCobb/dp/B0HJY91QT6",
+      paperback:
+        "https://www.amazon.com/Meeting-Allens-Hart-Street-Jordan/dp/B0HJH55WDR",
+    },
   },
   {
     slug: "jordan-makes-a-stand",
@@ -26,7 +33,14 @@ export const books = [
     ],
     cover: "/pacell-cover-2.png",
     comingSoon: false,
-    buyUrl: "https://www.amazon.com/Meeting-Allens-Jordan-Makes-Stand-ebook/dp/B0HGLXY4KV",
+    buyLinks: {
+      kindle:
+        "https://www.amazon.com/Meeting-Allens-Jordan-Makes-Stand-ebook/dp/B0HGLXY4KV",
+      hardcover:
+        "https://www.amazon.com/Meeting-Allens-Jordan-Makes-Stand/dp/B0HH28NY3Y",
+      paperback:
+        "https://www.amazon.com/Meeting-Allens-Jordan-Makes-Stand/dp/B0HGGTGVT3",
+    },
   },
   {
     slug: "jordan-makes-an-important-decision",
@@ -39,8 +53,16 @@ export const books = [
     ],
     cover: "/book3-cover.png",
     comingSoon: true,
-    buyUrl: null,
+    buyLinks: {},
   },
+];
+
+// Buy buttons, in display order. A format only gets a button once its
+// link is filled in under a book's `buyLinks`.
+export const FORMATS = [
+  { key: "kindle", label: "Kindle Edition" },
+  { key: "hardcover", label: "Hardcover" },
+  { key: "paperback", label: "Paperback" },
 ];
 
 export const AUTHOR = {

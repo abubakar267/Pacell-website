@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { FORMATS } from "../data/books";
 
 /**
  * One book per row: a large tilted cover mock-up on one side, the
@@ -67,14 +68,21 @@ export default function BookShowcase({ book, flipped = false }) {
               Coming soon
             </span>
           ) : (
-            <a
-              href={book.buyUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block rounded-full bg-coral px-8 py-3 text-sm font-bold uppercase tracking-widest text-cream shadow-md transition-transform hover:-translate-y-0.5"
-            >
-              Order today
-            </a>
+            <div className="flex flex-wrap justify-center gap-3 lg:justify-start">
+              {FORMATS.filter(({ key }) => book.buyLinks[key]).map(
+                ({ key, label }) => (
+                  <a
+                    key={key}
+                    href={book.buyLinks[key]}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block rounded-[3px] border border-[#FFA41C] bg-[#FFA41C] px-6 py-2.5 text-sm text-white shadow-[0_2px_5px_0_rgba(213,217,217,0.5)] transition-colors hover:bg-white hover:text-black"
+                  >
+                    {label}
+                  </a>
+                )
+              )}
+            </div>
           )}
         </div>
       </div>

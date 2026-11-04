@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { FORMATS } from "../data/books";
 
 export default function BookCard({ book }) {
   return (
@@ -46,14 +47,21 @@ export default function BookCard({ book }) {
               Coming soon
             </span>
           ) : (
-            <a
-              href={book.buyUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block rounded-full bg-coral px-6 py-2.5 text-sm font-bold text-cream transition-transform hover:-translate-y-0.5"
-            >
-              Order today
-            </a>
+            <div className="flex flex-wrap gap-2">
+              {FORMATS.filter(({ key }) => book.buyLinks[key]).map(
+                ({ key, label }) => (
+                  <a
+                    key={key}
+                    href={book.buyLinks[key]}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block rounded-[3px] border border-[#FFA41C] bg-[#FFA41C] px-4 py-2 text-sm text-white shadow-[0_2px_5px_0_rgba(213,217,217,0.5)] transition-colors hover:bg-white hover:text-black"
+                  >
+                    {label}
+                  </a>
+                )
+              )}
+            </div>
           )}
         </div>
       </div>
